@@ -1,5 +1,2 @@
 # chatGPT-UI
 
-```
-Hello world
-```
