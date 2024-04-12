@@ -5,7 +5,11 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  /* font-weight: 500; */
+}
+.small {
+  font-size: 10px;
+  color: #aca5a5;
 }
 .container {
   display: grid;
@@ -15,7 +19,13 @@
 .left {
   padding: 10px;
   background-color: #f9f9f9;
-  height: inherit;
+  height: calc(100vh - 20px); /* Changed height to 100% */
+  display: flex; /* Added display flex */
+  flex-direction: column; /* Added flex-direction column */
+}
+
+.middle {
+  flex-grow: 1; /* Allow the middle div to grow and occupy remaining space */
 }
 .left > .top {
   display: flex;
@@ -25,4 +35,32 @@
 }
 .left > .top > h4 {
   margin: 0 10px;
+}
+.left > .bottom > .plan > i {
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+  border: 1px solid black;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.left > .bottom > .plan {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.left > .bottom > .profile {
+  display: flex;
+  align-items: center;
+}
+.left > .bottom > .profile > img {
+  border-radius: 35px;
+  margin-right: 5px;
+}
+.middle {
+  flex-grow: 1;
 }
